@@ -1,0 +1,108 @@
+@import "partials/normalize";
+@import "bourbon";
+@import "neat";
+@import "partials/fonts";
+
+.faux-nav {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 42px;
+}
+
+.logo {
+    background: url("images/nav_logo.png") center no-repeat;
+    background-size: contain;
+    margin: 7px 0px 7px 20px;
+    height: 55px;
+    width: 55px;
+}
+
+.handwritten {
+    display: block;
+    height: 28px;
+    margin: auto;
+}
+
+.headline {
+    text-align: center;
+    margin-bottom: 41px;
+
+    &-title {
+        margin-top: 15px;
+        font-family: "denne__sketchyregular";
+        margin: 0 auto;
+    }
+}
+
+.teaser {
+    color: #898989;
+    font-family: $font-standard;
+    font-weight: 300;
+    margin: auto;
+    text-align: center;
+    width: 391px;
+
+    &-video {
+        background-color: #000;
+        background-image: url("images/teaser_video.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 650px;
+        margin: auto;
+        position: relative;
+    }
+}
+
+.video-play {
+    background: url("images/icons/ic_play_circle_outline_white_2x_web_48dp.png") center no-repeat;
+    background-size: contain;
+    height: 80px;
+    left: 50%;
+    margin: -50px -50px 0 0;
+    position: absolute;
+    top: 50%;
+    width: 80px;
+}
+
+.column {
+    float: left;
+    height: 400px;
+    width: 33.33%;
+}
+
+.exhibits {
+    @include clearfix;
+    margin-top: 35px;
+    width: 100%;
+}
+
+.exhibit {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    width: 365px;
+
+    &-title {
+        position: absolute;
+        width: 50%;
+    }
+}
+
+.exhibit-1 {
+    background-image: url("images/exhibit_1.png");
+}
+
+.exhibit-2 {
+    background-image: url("images/exhibit_2.png");
+}
+
+.exhibit-3 {
+    background-image: url("images/exhibit_3.png");
+}
+
+.page-footer {
+    background: url("images/desktop_footer.png") center;
+}
