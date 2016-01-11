@@ -257,9 +257,13 @@
     @include media($mobile) {
         background-image: url("images/mobile_footer.png");
         background-position: top;
-        background-size: contain;
+        background-size: cover;
         height: 1257px;
         margin-top: -5px;
+    }
+
+    @include media(min-width 200px max-width 550px, 6) {
+        background-size: contain;
     }
 }
 
@@ -285,7 +289,7 @@
     }
 }
 
-.ng-modal-overlay {
+.modal-overlay {
     background-color: #000;
     height: 100%;
     left: 0;
@@ -296,24 +300,38 @@
     z-index: 5;
 }
 
-.ng-modal-dialog {
-    background-color: #FFF;
+.modal-dialog {
     box-shadow: 4px 4px 80px #FFF;
-    height: 80%;
     left: 50%;
     position: absolute;
-    top: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 75%;
     z-index: 10;
+
+    @include media($mobile) {
+        top: 50%;
+        width: 90%;
+    }
 }
 
-.ng-modal-close {
+.modal-close {
     cursor: pointer;
     display: inline-block;
-    padding: 15px;
+    padding-right: 1%;
     position: absolute;
     right: 5px;
-    font-size: 25px;
+    font-size: 50px;
     top: 3px;
+    color: white;
+    z-index: 100;
+
+    @include media($mobile) {
+        font-size: 30px;
+        margin: -3%;
+        padding: 5%;
+    }
+}
+
+.main-video-wrapper > .embed-responsive-item {
+    padding: 5%;
 }

@@ -22,6 +22,6 @@ var app = angular.module('app', ['youtube-embed'])
                     scope.show = false;
                 };
             },
-            template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>x</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+            template: "<div class='ng-modal' ng-show='show'><div class='modal-overlay'></div><div class='modal-dialog'><div class='modal-close' ng-click='hideModal()'>x</div><div class='modal-dialog-content main-video-wrapper embed-responsive embed-responsive-16by9' ng-transclude></div></div></div>"
           };
 });
