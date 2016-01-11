@@ -9,7 +9,6 @@
 
         <link rel="stylesheet" href="styles.min.css">
 
-        <script src="app.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -19,43 +18,68 @@
         <header class="faux-nav">
             <div class="logo"></div>
         </header>
-        <main>
+        <main ng-app="app" ng-controller="VideoCtrl">
             <section class="headline">
                 <img class="handwritten" src="/images/The_Early_Days_ARCH_R4.png" alt="The Early Days">
                 <h1 class="headline-title">Mst3k</h1>
                 <div class="teaser">
-                    <p>In the not-too-distant future., next Sunday, AD There was a man. There were some puppets. It was amazing.These are the experiments of the SOL.</p>
+                    <p>In the not-too-distant future., next Sunday, AD</p>
+                    <p>There was a man. There were some puppets. It was amazing.</p>
+                    <p>These are the experiments of the SOL.</p>
                 </div>
-                <div class="teaser-video">
-                    <div class="video-play"></div>
+                <div class="teaser-video" ng-click="playVideo=true" ng-hide="playVideo">
+                    <div class="video-play" ng-click="playVideo=true" ng-hide="playVideo"></div>
+                </div>
+                <div class="main-video-wrapper embed-responsive embed-responsive-16by9" ng-hide="!playVideo">
+                    <youtube-video class="embed-responsive-item" video-id="mainVideo"></youtube-video>
                 </div>
             </section>
             <img class="handwritten" src="images/Look_What_We_Found.png" alt="Look what we found">
             <section class="exhibits">
                 <div class="column">
-                    <div class="exhibit exhibit-1">
-                        <h2 class="exhibit-title">Season 0<br>KTMA</h2>
-                        <p class="exhibit-explore">explore</p>
+                    <div class="exhibit exhibit-1" ng-click="toggleModal('m-1xDu4xh60')">
+                        <div class="exhibit-title">
+                            <h2><span>Season 0 </span><span>KTMA</span></h2>
+                            <p>explore</p>
+                        </div>
                     </div>
                 </div>
                 <div class="column">
-                    <div class="exhibit exhibit-2">
-                        <h2 class="exhibit-title">Comedy Central<br>The Golden Years</h2>
-                        <p class="exhibit-explore">explore</p>          
+                    <div class="exhibit exhibit-2" ng-click="toggleModal('PHPgWAnu_Gw')">
+                        <div class="exhibit-title">
+                            <h2><span>Comedy Central </span>The Golden Years</h2>
+                            <p>explore</p>
+                        </div>
                     </div>
                 </div>
                 <div class="column">
-                    <div class="exhibit exhibit-3">
-                        <h2 class="exhibit-title">Sci-Fi,<br>Crow’s voice,<br>& Ram Chips</h2>
-                        <p class="exhibit-explore">explore</p>   
+                    <div class="exhibit exhibit-3" ng-click="toggleModal('zEwdNEsZJ20')">
+                        <div class="exhibit-title">
+                            <h2><span>Sci-Fi, </span>Crow’s voice, <span>&amp; Ram Chips</span></h2>
+                            <p>explore</p>
+                        </div>
                     </div>
                 </div>
+                <modal-dialog class="main-video-wrapper embed-responsive embed-responsive-16by9" show="modalShown">
+                    <youtube-video video-id="video" class="embed-responsive-item"></youtube-video>
+                </modal-dialog>
             </section>
         </main>
         <footer>
-            <section class="page footer"></section>
+            <section class="page footer">
+                <div class="social-footer">
+                    <ul>
+                        <a href="//facebook.com"><li class="icon-facebook"></li></a>
+                        <a href="//twitter.com"><li class="icon-twitter"></li></a>
+                        <a href="//plus.google.com/"><li class="icon-google_plus"></li></a>
+                        <a href="pinterest.com"><li class="icon-pinterest"></li></a>
+                    </ul>
+                </div>
+                <div class="faux-footer"></div>
+            </section>
         </footer>
 
-        <script src="js/app.min.js"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="app.min.js"></script>
     </body>
 </html>

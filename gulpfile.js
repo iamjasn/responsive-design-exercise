@@ -45,13 +45,13 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('js', function () {
-    return gulp.src(['src/js/*.js'])
+    return gulp.src(['src/js/angular.js', 'src/js/*.js'])
         .pipe(eslint.format())
         .pipe(sourcemaps.init())
             .pipe(concat('app.js'))
             .pipe(ngAnnotate())
             .pipe(uglify())
-            .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist'))
         .pipe(livereload());

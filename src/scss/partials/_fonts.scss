@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,500);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300);
-@import "denne-sketchy";
+@include font-face("DENNE-Sketchy", "/fonts/DENNE-Sketchy", $file-formats: woff);
+
 
 // variables
-$font-decorative: denne-sketchy, sans-serif;
+$font-decorative: "DENNE-Sketchy", sans-serif;
 $font-standard: Roboto, sans-serif;
 $font-header: "Roboto Slab", serif;
