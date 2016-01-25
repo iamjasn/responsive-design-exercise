@@ -1,4 +1,4 @@
-# R/GA Software Engineer Code Test
+# Responsive design/Angular.js Software Engineer Exercise
 
 1. run `npm-install`
 2. run `gulp`
